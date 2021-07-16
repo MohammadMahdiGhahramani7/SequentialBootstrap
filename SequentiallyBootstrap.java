@@ -11,7 +11,7 @@ import java.util.Random;
 public class SequentiallyBootstrap {
 	
 	public static void print_arraylist(ArrayList<Integer> phi) {
-		 /*
+	/*
 	      This function is just for printing purposes.
 	      By calling this function, ArrayLists are printed
 	      like Python lists.
@@ -22,7 +22,7 @@ public class SequentiallyBootstrap {
 	      arrlst.add(3);
 	      
 	      print_arraylists(arrlst); => [1, 2, 3]
-	     */
+	*/
 		
 		System.out.print("[");
 		
@@ -43,7 +43,7 @@ public class SequentiallyBootstrap {
 	}
 	
 	public static void print_array(float[] array) {
-		/*
+	/*
 	      This function is just for printing purposes.
 	      By calling this function, java arrays are printed
 	      like Python lists.
@@ -51,7 +51,7 @@ public class SequentiallyBootstrap {
 	      flot[] arr = {1,2,3};
 	      
 	      print_array(arr); => [1, 2, 3]
-	      */
+	*/
 		
 		System.out.print("[");
 		
@@ -64,7 +64,7 @@ public class SequentiallyBootstrap {
 	
 	
 	public static void print_matrix(float[][] matrix) {
-		/*
+	/*
 	      This function is just for printing purposes.
 	      By calling this function, java matrixes are printed
 	      like its standard forms.
@@ -74,7 +74,7 @@ public class SequentiallyBootstrap {
 				     		  
 	      print_matrix(matrix); => 0.0 1.0 0.0 
                                        1.0 0.0 1.0 
-	     */
+	*/
 		
 		for(float[] v : matrix) 
 			
@@ -91,7 +91,7 @@ public class SequentiallyBootstrap {
 	}
 	
 	public static float [][] trans(float [][] A){
-		/*
+	/*
 		Simply transposes a matrix by switching its rows with its columns
 		
 		float[][] mat = {{2,3,7},
@@ -100,7 +100,7 @@ public class SequentiallyBootstrap {
 		print_matrix(trans(mat)); => 2.0 1.0 
 					     3.0 0.0 
  					     7.0 8.0 
-		*/
+	*/
 		
 		int row = A.length;
 		int col = A[0].length;
@@ -122,13 +122,13 @@ public class SequentiallyBootstrap {
 	
 
 	public static float sum_array(float[] arr) {
-		/*
+	/*
 	      This function calculates the sum of elements belonging to an array.
 	      
 	      float[] arr = {1,2,3};
 	   
 	      sum_array(arr); => 6.0
-	     */
+	*/
 		
 		float sum = 0.0f;
 		
@@ -142,7 +142,7 @@ public class SequentiallyBootstrap {
 	
 	
 	public static float[] sum(float[][] matrix,int axis) {
-		/*
+	/*
 	      This function calculates the column or row based sum over a matrix.
 	      
 	      float[][] matrix = {{0, 1, 0, 0, 1, 0, 1, 1, 0, 0},
@@ -156,9 +156,9 @@ public class SequentiallyBootstrap {
 				  {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
 				  {0, 0, 1, 0, 1, 0, 0, 0, 1, 0}};
 		
-              print_array(sum(matrix,0)) => [4.0, 5.0, 7.0, 9.0, 5.0, 5.0, 4.0, 4.0, 1.0, 3.0]
-	      print_array(sum(matrix,1)) => [4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 6.0, 5.0]
-	     */
+              print_array(sum(matrix,0)); => [4.0, 5.0, 7.0, 9.0, 5.0, 5.0, 4.0, 4.0, 1.0, 3.0]
+	      print_array(sum(matrix,1)); => [4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 6.0, 5.0]
+	*/
 		
 		float [] c_t;
 		float sum = 0.0f;
@@ -201,7 +201,7 @@ public class SequentiallyBootstrap {
 	
 	
 	public static float[][] delete_zeros(float[][] matrix){
-		/*
+	/*
 		This function drops all zero rows of a matrix.
 		
 		float[][] mat = {{0, 0, 0, 0, 0, 0},
@@ -210,7 +210,7 @@ public class SequentiallyBootstrap {
 	     				 
 		print_matrix(delete_zeros(mat)); => 0, 0, 1, 1, 0, 0
 	     				            1, 0, 0, 1, 1, 1
-		*/ 
+	*/ 
 		
 		int l=0;
 		
@@ -239,11 +239,11 @@ public class SequentiallyBootstrap {
 	
 	
 	public static float[] broadcast(float num, int size) {
-		/*
+	/*
 		 Creates a java array of length size and assign each element to num.
 		 
 		 print_array(broadcast(2, 5)); => [2.0, 2.0, 2.0, 2.0, 2.0]
-		 */
+        */
 		
 		float[] result = new float[size];
 		
@@ -255,13 +255,13 @@ public class SequentiallyBootstrap {
 	
 	public static float[] div_arr(float[] arr1, float[] arr2) {
 		
-		/*
+	/*
 		 Divides each element of arr1 on its corresponding element in arr2.
 		 
 		 float[] arr1 = {1,2,3};
 		 float[] arr2 = {2,1,3};
 		 print_array(div_arr(arr1, arr2)); => [0.5, 2.0, 1.0]
-		*/
+	*/
     	
 		for(int i=0; i<arr1.length ; i++) 
 			
@@ -274,23 +274,23 @@ public class SequentiallyBootstrap {
 	
         public static float[][] div_matrix(float[][] matrix, float[] arr, int axis) {
     	/*
-    	 Divides each row/column of a matrix on its corresponding element in arr.
+    	 	Divides each row/column of a matrix on its corresponding element in arr.
     	 
-         float[][] mat = {{1,2,3},
-			  {4,5,6},
-			  {7,8,9}};
+         	float[][] mat = {{1,2,3},
+			         {4,5,6},
+			         {7,8,9}};
 		
-	 float[] arr = {1,2,3};
+	 	float[] arr = {1,2,3};
 		
-	 print_matrix(div_matrix(mat, arr, 0)); => 1.0 2.0 3.0 
-                                                   2.0 2.5 3.0 
-                                                   2.3 2.6 3.0 
+	 	print_matrix(div_matrix(mat, arr, 0)); => 1.0 2.0 3.0 
+                                                          2.0 2.5 3.0 
+                                                          2.3 2.6 3.0 
 		
 		
 		
-	 print_matrix(div_matrix(mat, arr, 1)); => 1.0 1.0 1.0 
-						   4.0 2.5 2.0 
-						   7.0 4.0 3.0
+	 	print_matrix(div_matrix(mat, arr, 1)); => 1.0 1.0 1.0 
+						          4.0 2.5 2.0 
+						          7.0 4.0 3.0
     	*/
     	
     	boolean bool = false;
@@ -321,10 +321,10 @@ public class SequentiallyBootstrap {
     
 	
 	public static float[] getAvgUniqueness(float[][] indM) {
-		/*
+	/*
 		Java code for (SNIPPET 4.4 : COMPUTE AVERAGE UNIQUENESS - Page 65) of 
 		Advances in Financial Machine Learning by MARCOS LÓPEZ DE PRADO
-		*/
+	*/
 		
 		float[] count = sum(indM, 1);
 		float[] c_t = sum(indM, 0);
@@ -337,13 +337,13 @@ public class SequentiallyBootstrap {
 	
 	
 	public static int choice(int[] list, float[] p) {
-		/*
+	/*
 		Since there is no java function for np.random.choice(In Python),
 		this function performs this task.
 		
 		Python : np.random.choice(list, probs)
 		Java : choice(list, probs)
-		 */
+	*/
 		
 		Random random = new Random();
 		
@@ -367,10 +367,10 @@ public class SequentiallyBootstrap {
 	
 	
 	public static ArrayList<Integer> seqBootstrap(float[][] indM, Integer sLength) {
-		/*
+	/*
 		Java code for (SNIPPET 4.5 : RETURN SAMPLE FROM SEQUENTIAL BOOTSTRAP - Page 65) of 
 		Advances in Financial Machine Learning by MARCOS LÓPEZ DE PRADO
-		*/
+	*/
 		
 		int cols = indM[0].length;
 		
