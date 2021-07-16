@@ -51,7 +51,7 @@ public class SequentiallyBootstrap {
 	      flot[] arr = {1,2,3};
 	      
 	      print_array(arr); => [1, 2, 3]
-	     */
+	      */
 		
 		System.out.print("[");
 		
@@ -70,10 +70,10 @@ public class SequentiallyBootstrap {
 	      like its standard forms.
 	      
 	      float[][] matrix = {{0, 1, 0},
-				     		  {1, 0, 1}};
+				  {1, 0, 1}};
 				     		  
-		  print_matrix(matrix); => 0.0 1.0 0.0 
-                                   1.0 0.0 1.0 
+	      print_matrix(matrix); => 0.0 1.0 0.0 
+                                       1.0 0.0 1.0 
 	     */
 		
 		for(float[] v : matrix) 
@@ -95,11 +95,11 @@ public class SequentiallyBootstrap {
 		Simply transposes a matrix by switching its rows with its columns
 		
 		float[][] mat = {{2,3,7},
-				         {1,0,8}};
+				 {1,0,8}};
 				         
 		print_matrix(trans(mat)); => 2.0 1.0 
-									 3.0 0.0 
- 								     7.0 8.0 
+					     3.0 0.0 
+ 					     7.0 8.0 
 		*/
 		
 		int row = A.length;
@@ -127,7 +127,7 @@ public class SequentiallyBootstrap {
 	      
 	      float[] arr = {1,2,3};
 	   
-		  sum_array(arr); => 6.0
+	      sum_array(arr); => 6.0
 	     */
 		
 		float sum = 0.0f;
@@ -146,18 +146,18 @@ public class SequentiallyBootstrap {
 	      This function calculates the column or row based sum over a matrix.
 	      
 	      float[][] matrix = {{0, 1, 0, 0, 1, 0, 1, 1, 0, 0},
-				     		  {1, 0, 1, 1, 0, 1, 1, 0, 0, 0},
-				     		  {0, 1, 1, 1, 1, 0, 0, 1, 1, 1},
-				     		  {1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
-				     		  {1, 0, 0, 0, 0, 1, 0, 1, 1, 1},
-				     		  {1, 0, 1, 1, 0, 1, 0, 0, 0, 1},
-				     		  {0, 0, 0, 1, 1, 0, 1, 0, 1, 0},
-				     		  {0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
-				     		  {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-				     		  {0, 0, 1, 0, 1, 0, 0, 0, 1, 0}};
+				  {1, 0, 1, 1, 0, 1, 1, 0, 0, 0},
+				  {0, 1, 1, 1, 1, 0, 0, 1, 1, 1},
+				  {1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+			          {1, 0, 0, 0, 0, 1, 0, 1, 1, 1},
+				  {1, 0, 1, 1, 0, 1, 0, 0, 0, 1},
+				  {0, 0, 0, 1, 1, 0, 1, 0, 1, 0},
+				  {0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
+				  {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+				  {0, 0, 1, 0, 1, 0, 0, 0, 1, 0}};
 		
-		 print_array(sum(matrix,0)) => [4.0, 5.0, 7.0, 9.0, 5.0, 5.0, 4.0, 4.0, 1.0, 3.0]
-	     print_array(sum(matrix,1)) => [4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 6.0, 5.0]
+              print_array(sum(matrix,0)) => [4.0, 5.0, 7.0, 9.0, 5.0, 5.0, 4.0, 4.0, 1.0, 3.0]
+	      print_array(sum(matrix,1)) => [4.0, 4.0, 5.0, 6.0, 5.0, 4.0, 4.0, 4.0, 6.0, 5.0]
 	     */
 		
 		float [] c_t;
@@ -205,16 +205,16 @@ public class SequentiallyBootstrap {
 		This function drops all zero rows of a matrix.
 		
 		float[][] mat = {{0, 0, 0, 0, 0, 0},
-	     				 {0, 0, 1, 1, 0, 0},
-	     				 {1, 0, 0, 1, 1, 1}};
+	     			 {0, 0, 1, 1, 0, 0},
+	     		         {1, 0, 0, 1, 1, 1}};
 	     				 
 		print_matrix(delete_zeros(mat)); => 0, 0, 1, 1, 0, 0
-	     				                    1, 0, 0, 1, 1, 1
+	     				            1, 0, 0, 1, 1, 1
 		*/ 
 		
 		int l=0;
 		
-        ArrayList<Integer> err = new ArrayList<Integer>();
+                ArrayList<Integer> err = new ArrayList<Integer>();
         
 		for(int i=0; i<matrix.length; i++) {
 			
@@ -272,25 +272,25 @@ public class SequentiallyBootstrap {
 	}
 	
 	
-    public static float[][] div_matrix(float[][] matrix, float[] arr, int axis) {
+        public static float[][] div_matrix(float[][] matrix, float[] arr, int axis) {
     	/*
     	 Divides each row/column of a matrix on its corresponding element in arr.
     	 
-        float[][] mat = {{1,2,3},
-				         {4,5,6},
-				         {7,8,9}};
+         float[][] mat = {{1,2,3},
+			  {4,5,6},
+			  {7,8,9}};
 		
-		float[] arr = {1,2,3};
+	 float[] arr = {1,2,3};
 		
-		print_matrix(div_matrix(mat, arr, 0)); => 1.0 2.0 3.0 
-                                                  2.0 2.5 3.0 
-                                                  2.3 2.6 3.0 
+	 print_matrix(div_matrix(mat, arr, 0)); => 1.0 2.0 3.0 
+                                                   2.0 2.5 3.0 
+                                                   2.3 2.6 3.0 
 		
 		
 		
-		print_matrix(div_matrix(mat, arr, 1)); => 1.0 1.0 1.0 
-												  4.0 2.5 2.0 
-												  7.0 4.0 3.0
+	 print_matrix(div_matrix(mat, arr, 1)); => 1.0 1.0 1.0 
+						   4.0 2.5 2.0 
+						   7.0 4.0 3.0
     	*/
     	
     	boolean bool = false;
@@ -350,7 +350,8 @@ public class SequentiallyBootstrap {
 		float threshold = random.nextFloat();
 		
 		float sum_p = 0.0f;
-        int i = 0;		
+		
+                int i = 0;		
         
 		for(i=0; i<list.length; i++) {
 			
@@ -424,15 +425,15 @@ public class SequentiallyBootstrap {
 		// TEST ONE
 		
 		float[][] matrix1 = {{0, 1, 0, 0, 1, 0, 1, 1, 0, 0},
-				     		{1, 0, 1, 1, 0, 1, 1, 0, 0, 0},
-				     		{0, 1, 1, 1, 1, 0, 0, 1, 1, 1},
-				     		{1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
-				     		{1, 0, 0, 0, 0, 1, 0, 1, 1, 1},
-				     		{1, 0, 1, 1, 0, 1, 0, 0, 0, 1},
-				     		{0, 0, 0, 1, 1, 0, 1, 0, 1, 0},
-				     		{0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
-				     		{0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-				     		{0, 0, 1, 0, 1, 0, 0, 0, 1, 0}};
+				     {1, 0, 1, 1, 0, 1, 1, 0, 0, 0},
+				     {0, 1, 1, 1, 1, 0, 0, 1, 1, 1},
+				     {1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+				     {1, 0, 0, 0, 0, 1, 0, 1, 1, 1},
+				     {1, 0, 1, 1, 0, 1, 0, 0, 0, 1},
+				     {0, 0, 0, 1, 1, 0, 1, 0, 1, 0},
+				     {0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
+				     {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+				     {0, 0, 1, 0, 1, 0, 0, 0, 1, 0}};
 		
 		long startTime1 = System.nanoTime();
 		
@@ -464,16 +465,15 @@ public class SequentiallyBootstrap {
 		
 		/*
 		 [9, 4, 3, 6, 1, 7, 1, 8, 9, 6]
-         TEST ONE took 3 miliseconds
+                 TEST ONE took 3 miliseconds
          
-         [39, 57, 40, 6, 61, 89, 92, 67, 17, 67, 27, 33, 94, 41, 89, 35, 98, 18,
-          19, 18, 10, 69, 98, 93, 3, 25, 23, 67, 63, 6, 30, 96, 66, 17, 63, 46,
-          51, 63, 90, 10, 69, 78, 95, 92, 39, 58, 80, 95, 22, 72, 60, 74, 74, 73,
-          24, 59, 25, 38, 84, 54, 96, 84, 20, 55, 32, 88, 1, 82, 2, 70, 78, 6,
-          33, 61, 53, 10, 92, 45, 96, 45, 31, 87, 54, 65, 70, 63, 23, 2, 72, 24,
-          95, 66, 30, 5, 33, 16, 82, 63, 26, 47]
-          
-         TEST TWO took 8025 miliseconds
+                 [39, 57, 40, 6, 61, 89, 92, 67, 17, 67, 27, 33, 94, 41, 89, 35, 98, 18,
+                  19, 18, 10, 69, 98, 93, 3, 25, 23, 67, 63, 6, 30, 96, 66, 17, 63, 46,
+                  51, 63, 90, 10, 69, 78, 95, 92, 39, 58, 80, 95, 22, 72, 60, 74, 74, 73,
+                  24, 59, 25, 38, 84, 54, 96, 84, 20, 55, 32, 88, 1, 82, 2, 70, 78, 6,
+                  33, 61, 53, 10, 92, 45, 96, 45, 31, 87, 54, 65, 70, 63, 23, 2, 72, 24,
+                  95, 66, 30, 5, 33, 16, 82, 63, 26, 47]
+                 TEST TWO took 8025 miliseconds
 		*/
 	}
 
